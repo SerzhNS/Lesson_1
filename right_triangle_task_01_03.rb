@@ -29,8 +29,8 @@ else
 end
 
   hip = side.max
-  side[side.index(hip)] = nil
-  side.compact!
+  hyp = side.delete(side.max)
+  
   if (side[0]**2 + side[1]**2 - hip**2).abs < 0.05*hip
     puts "==> Он, к тому же, еще и прямоугольный"
   end  
